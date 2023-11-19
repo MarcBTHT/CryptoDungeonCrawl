@@ -79,15 +79,10 @@ CryptoDungeonCrawl is a text-based dungeon crawler game where the in-game enviro
    - [ ] Develop mechanisms to dynamically adjust in-game elements based on real-world market data.
    - [ ] Implement events triggered by changes in external information, affecting the game environment.
 
-4. **API and Game Integration**
-   - [ ] Establish a connection between the API and the game.
-   - [ ] Develop mechanisms to dynamically adjust in-game elements based on real-world market data.
-   - [ ] Implement events triggered by changes in external information, affecting the game environment.
-
-5. **Multiplayer Integration**
+4. **Multiplayer Integration**
    - [ ] Add multiplayer functionality to the game.
    - [ ] Implement multiplayer interactions, such as cooperative gameplay or competitive challenges.
 
-6. **Player-driven Actions**
+5. **Player-driven Actions**
    - [ ] Enable players to perform external actions that influence the game.
    - [ ] Define a set of actions players can take outside the game to disadvantage or challenge other players.
