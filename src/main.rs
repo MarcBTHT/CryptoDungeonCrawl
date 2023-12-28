@@ -34,7 +34,8 @@ use std::time::{Duration, Instant};
 struct State {
     ecs : World,
     resources: Resources,
-    systems: Schedule,
+    main_schedule: Schedule, // Schedule principal (Move player)
+    periodic_schedule: Schedule, // Schedule pour les mises à jour périodiques (Move monsters)
     last_update: Instant,
 }
 
@@ -56,39 +57,27 @@ impl State {
         Self {
             ecs,
             resources,
-            systems: build_scheduler(),
+            main_schedule: build_main_scheduler(),
+            periodic_schedule: build_periodic_scheduler(),
             last_update: Instant::now(), // Initialisation de la variable de temps
         }
     }
-    /* 
-    // Méthode pour déplacer le joueur (TEST POUR SAVOIR SI LA DYNAMIQUE FONCTIONNE)
-    fn move_player(&mut self) {
-        let delta = Point::new(1, 0); // Déplacer le joueur d'une case vers la droite
-        let new_position = self.player.position + delta;
-        if self.map.can_enter_tile(new_position) {
-            self.player.position = new_position;
-        }
-    }*/
 }
 
 impl GameState for State {
     fn tick(&mut self, ctx: &mut BTerm) {
-        /* 
         let current_time = Instant::now();
-        if current_time.duration_since(self.last_update) >= Duration::from_millis(500) {
-            // Mise à jour toutes les 500 millisecondes
-            // NEED TO DEFINE THE CODE TO MOVE THE MONSTERS HERE
-            self.move_player(); //Test
-
-            self.last_update = current_time; // Réinitialisation du compteur de temps
-        }*/
+        if current_time.duration_since(self.last_update) >= Duration::from_millis(1000) { //NEED to modify the time base of the price of BTC
+            self.periodic_schedule.execute(&mut self.ecs, &mut self.resources); //Move of the monsters
+            self.last_update = current_time;
+        }
 
         ctx.set_active_console(0);
         ctx.cls();
         ctx.set_active_console(1);
         ctx.cls();
         self.resources.insert(ctx.key);
-        self.systems.execute(&mut self.ecs, &mut self.resources);
+        self.main_schedule.execute(&mut self.ecs, &mut self.resources);
         render_draw_buffer(ctx).expect("Render error");
     }
 }

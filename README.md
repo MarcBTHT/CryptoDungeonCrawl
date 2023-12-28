@@ -28,8 +28,11 @@ CryptoDungeonCrawl is a text-based dungeon crawler game where the in-game enviro
 
    - **Take Turns with the Monsters**
      - [x] Making monsters wander randomly.
-     - [ ] !!!! Moving entities in real-time !!!!
-     - [ ] Sending messages of intent.
+     - [x] !!!! Moving entities in real-time !!!!
+       - I replaced random_move with monsters_move, where all monsters move 1 square in the player's direction (basic algorithm, you could do an A* algo).
+       - Then I split the program, because before the monsters logic was in the ECS system, which is executed every turn (every player input).
+         - I divided it into main_schedule and periodic schedule (mod.rs).
+         - Then, in the tick function (main.rs), I call the periodic schedule, which moves every 1s (after which it changes according to the BTC price) and the main schedule as before.
 
    - **Health and Melee Combat**
      - [ ] Giving entities hit points.
@@ -41,36 +44,6 @@ CryptoDungeonCrawl is a text-based dungeon crawler game where the in-game enviro
      - [ ] Building a smarter monster.
      - [ ] Implementing a game over screen.
      - [ ] Finding the Amulet of Yala.
-
-   - **Fields of View**
-     - [ ] Defining an entity’s field of view.
-     - [ ] Limiting monsters’ fields of view.
-     - [ ] Adding spatial memory.
-
-   - **More Interesting Dungeons**
-     - [ ] Creating traits.
-     - [ ] Creating cellular automata maps.
-     - [ ] Creating drunkard’s walk maps.
-     - [ ] Prefabricating map sections.
-
-   - **Map Themes**
-     - [ ] Theming your dungeon.
-     - [ ] Rendering with themes.
-     - [ ] Unleashing your imagination.
-
-   - **Inventory and Power-Ups**
-     - [ ] Designing items.
-     - [ ] Managing inventory.
-    
-   - **Deeper Dungeons**
-     - [ ] Adding stairs to the map.
-     - [ ] Tracking game level.
-     - [ ] Displaying the current level on the HUD.
-
-   - **Combat Systems and Loot**
-     - [ ] Designing data-driven dungeons.
-     - [ ] Extending the combat system.
-     - [ ] Adding more swords.
 
 3. **API and Game Integration**
    - [ ] Establish a connection between the API and the game.
