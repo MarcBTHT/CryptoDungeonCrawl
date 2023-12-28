@@ -37,13 +37,10 @@ CryptoDungeonCrawl is a text-based dungeon crawler game where the in-game enviro
    - **Health and Melee Combat**
      - [x] Giving entities hit points.
      - [x] Adding a heads-up display.
-     - [ ] Implementing combat.
-     - [ ] Waiting as a strategy.
-
-   - **Victory and Defeat**
-     - [ ] Building a smarter monster.
-     - [ ] Implementing a game over screen.
-     - [ ] Finding the Amulet of Yala.
+     - [x] Implementing combat:
+       I implement my own solution:
+         - I modify collisions.rs. I strungle because we can't borrow `*ecs` as mutable because it's also borrowed as immutable
+          mutable borrowing occurs. And I add other difficulties. And I had other difficulties.
 
 3. **API and Game Integration**
    - [ ] Establish a connection between the API and the game.
