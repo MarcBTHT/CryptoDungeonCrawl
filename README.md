@@ -43,9 +43,9 @@ CryptoDungeonCrawl is a text-based dungeon crawler game where the in-game enviro
           mutable borrowing occurs. And I add other difficulties. And I had other difficulties.
 
 3. **API and Game Integration**
-   - [ ] Establish a connection between the API and the game.
-   - [ ] Develop mechanisms to dynamically adjust in-game elements based on real-world market data.
-   - [ ] Implement events triggered by changes in external information, affecting the game environment.
+   - [x] Establish a connection between the API and the game.
+   - [x] Develop mechanisms to dynamically adjust in-game elements based on real-world market data:
+     - Depending on the price of BTC, the speed of monsters changes
 
 4. **Multiplayer Integration**
    - [ ] Add multiplayer functionality to the game.
