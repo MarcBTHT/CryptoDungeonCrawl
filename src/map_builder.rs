@@ -1,6 +1,6 @@
 use crate::prelude::*;
-const NUM_ROOMS: usize = 20;
 
+const NUM_ROOMS: usize = 20;
 pub struct MapBuilder { //Copy of the map and then pass the resutl to the game
     pub map : Map, 
     pub rooms: Vec<Rect>,

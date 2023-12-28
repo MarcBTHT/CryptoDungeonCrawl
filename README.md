@@ -35,8 +35,8 @@ CryptoDungeonCrawl is a text-based dungeon crawler game where the in-game enviro
          - Then, in the tick function (main.rs), I call the periodic schedule, which moves every 1s (after which it changes according to the BTC price) and the main schedule as before.
 
    - **Health and Melee Combat**
-     - [ ] Giving entities hit points.
-     - [ ] Adding a heads-up display.
+     - [x] Giving entities hit points.
+     - [x] Adding a heads-up display.
      - [ ] Implementing combat.
      - [ ] Waiting as a strategy.
 
