@@ -21,30 +21,11 @@ impl Map {
     //Constructor for the Map type
     pub fn new() -> Self {
         Self {
-            tiles: vec![TileType::Floor; NUM_TILES], //Creat a map of floor tiles !!FOR NOW!!
-        }
-    }
-
-    pub fn render(&self, ctx: &mut BTerm) {
-        //The map needs to be able to draw itself to the screen
-        for y in 0..SCREEN_HEIGHT {
-            for x in 0..SCREEN_WIDTH {
-                let idx = map_idx(x, y); //Determine the index of the tile we want to draw (0,0)=0, (1,0)=1, (0,1)=80, (1,1)=81 ...
-                match self.tiles[idx] {
-                    //We render each map tile
-                    TileType::Floor => {
-                        ctx.set(x, y, YELLOW, BLACK, to_cp437('.'));
-                    }
-                    TileType::Wall => {
-                        ctx.set(x, y, GREEN, BLACK, to_cp437('#'));
-                    }
-                }
-            }
+            tiles: vec![TileType::Floor; NUM_TILES], //Creat a map of floor tiles 
         }
     }
 
     //////////////// SET the map ////////////////
-
     // If an x/y coordinate pair is within the bounds of the map.
     pub fn in_bounds(&self, point: Point) -> bool {
         point.x >= 0 && point.x < SCREEN_WIDTH && point.y >= 0 && point.y < SCREEN_HEIGHT

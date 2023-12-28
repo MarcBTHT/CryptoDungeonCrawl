@@ -15,20 +15,20 @@ CryptoDungeonCrawl is a text-based dungeon crawler game where the in-game enviro
    - **Build a Dungeon Crawler**
      - [x] Storing the dungeon map.
      - [x] Adding the adventurer.
-     - [x] Making games dynamic.
+     - [x] Create a real-time game.
      - [x] Building a dungeon.
          
    - **Compose Dungeon Denizens**
-     - [ ] Composing entities.
-     - [ ] Installing and using Legion (an ECS library).
-     - [ ] Composing the player.
-     - [ ] Managing complexity with systems.
-     - [ ] Adding monsters.
-     - [ ] Collision detection.
+     - [x] Composing entities.
+     - [x] Installing and using Legion (an ECS library).
+     - [x] Composing the player.
+     - [x] Managing complexity with systems.
+     - [x] Adding monsters.
+     - [x] Collision detection.
 
    - **Take Turns with the Monsters**
-     - [ ] Making monsters wander randomly.
-     - [ ] Moving entities in a turn-based game.
+     - [x] Making monsters wander randomly.
+     - [ ] !!!! Moving entities in real-time !!!!
      - [ ] Sending messages of intent.
 
    - **Health and Melee Combat**
