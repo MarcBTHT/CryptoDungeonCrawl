@@ -16,7 +16,7 @@ CryptoDungeonCrawl is a text-based dungeon crawler game where the in-game enviro
      - [x] Storing the dungeon map.
      - [x] Adding the adventurer.
      - [x] Making games dynamic.
-     - [ ] Building a dungeon.
+     - [x] Building a dungeon.
          
    - **Compose Dungeon Denizens**
      - [ ] Composing entities.
