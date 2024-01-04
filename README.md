@@ -28,7 +28,7 @@ CryptoDungeonCrawl is a text-based dungeon crawler game where the in-game enviro
 
    - **Take Turns with the Monsters**
      - [x] Making monsters wander randomly.
-     - [x] !!!! Moving entities in real-time !!!!
+     - [x] !!!! Moving entities in real-time !!!! [**Commit**](https://github.com/MarcBTHT/CryptoDungeonCrawl/commit/cd4845fa4a12fc8b77eb950444fcbde77029d928)
        - I replaced random_move with monsters_move, where all monsters move 1 square in the player's direction (basic algorithm, you could do an A* algo).
        - Then I split the program, because before the monsters logic was in the ECS system, which is executed every turn (every player input).
          - I divided it into main_schedule and periodic schedule (mod.rs).
@@ -54,3 +54,9 @@ CryptoDungeonCrawl is a text-based dungeon crawler game where the in-game enviro
 5. **Player-driven Actions**
    - [ ] Enable players to perform external actions that influence the game.
    - [ ] Define a set of actions players can take outside the game to disadvantage or challenge other players.
+
+## Demo
+
+https://github.com/MarcBTHT/CryptoDungeonCrawl/assets/116173196/27caa4f5-5131-42d5-8df0-92c08d8938db
+
+
